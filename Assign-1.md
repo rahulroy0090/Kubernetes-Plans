@@ -1,11 +1,11 @@
 
 [What are the basic components of Docker?](#what-are-the-basic-components-of-docker)
+
 [Difference between containerization and virtual machines.](#difference-between-containerization-and-virtual-machines)
 
 [Why do we use containerization?](#why-do-we-use-containerization)
 
-[Difference between a container and a pod.
-](#difference-between-a-container-and-a-pod)
+[Difference between a container and a pod.](#difference-between-a-container-and-a-pod)
  
 [How Docker storage and networking work.](#how-docker-storage-and-networking-work)
 
@@ -25,6 +25,141 @@
 
 
 ## What are the basic components of Docker?
+
+
+
+<li> Docker is an open-source centralized platform designed to create, deploy, and run applications. </li>
+
+<li> Docker uses containers on the host OS to run applications. It allows applications to use the same Linux kernel as a system on the host computer, rather than creating a whole virtual OS.</li> 
+
+<li>
+ We can install Docker on any OS, but the Docker engine runs natively on Linux distributions.
+</li> 
+
+<li>
+Docker is written in the 'Go' language. 
+</li>
+
+<li>
+Docker is a tool that performs OS-level virtualization, also known as containerization. 
+</li>
+
+<li>
+Before Docker, many users faced the problem that a particular code was running on the developer's system but not on the user's system. 
+</li>
+
+<li>
+Docker was first released in March 2013. It is developed by Solomon Hykes and Sebastien Pahl.
+</li>
+
+<li>
+ Docker is a set of platform-as-a-service that uses OS-level virtualization, whereas VMware uses hardware-level virtualization."
+</li>
+
+<h4> Advantages of Docker: </h4>
+
+<li> No Pre-allocation of RAM </li> 
+
+<li>CI Efficiency -> Docker enables you to build a container image and use that same image across every step of the deployment process. </li>
+
+<li>Less cost</li>
+<li>It is lightweight.</li>
+
+
+<li>
+ It can run on physical hardware, virtual hosts, or in the cloud.
+</li> 
+
+<li>
+You can reuse the images.
+</li>
+
+<li>
+It takes very little time to create a container. 
+</li>
+
+
+<h4>Disadvantages of Docker:</h4>
+
+<li>
+Docker is not a good solution for applications that require a rich GUI. 
+</li>
+
+<li>
+Difficult to manage a large amount of containers. 
+</li>
+
+<li>
+Docker does not provide cross-platform compatibility. This means if an application is designed to run in a Docker container on Windows, then it cannot run on Linux or vice versa. 
+</li>
+
+<li>
+Docker is suitable when the development OS and testing OS are the same, or if the OS is different, we should use the same. 
+</li>
+
+<li>
+No solution for data recovery and backup. 
+</li>
+
+
+
+
+--------------------------------------------------
+<h4>
+Components of Docker:
+ </h4>
+
+<h5>Docker Daemon:</h5> 
+Docker daemon runs on the Host OS.
+It is responsible for running containers and managing Docker services.
+Docker daemon can communicate with other daemons.
+
+<h5>Docker Client:</h5> 
+Docker users can interact with the Docker daemon through a client (CLI).
+Docker client uses commands and REST API to communicate with the Docker daemon.
+When a client runs any server commands on the Docker client terminal, the client terminal sends these Docker commands to the Docker daemon.
+It is possible for the Docker client to communicate with more than one daemon.
+
+<h5>Docker Host</h5> 
+
+Docker host is used to provide an environment to execute and run applications.
+It contains the Docker daemon, images, containers, networks, and storage.
+
+<h5>
+Docker Hub/Registry: 
+</h5>
+
+Docker registry manages and stores the Docker images.
+There are two types of registries in Docker.
+Public Registry: Public Registry is also called Docker Hub.
+Private Registry: It is used to share images within the enterprise.
+
+<h5>Docker Images: </h5>
+
+
+Docker images are the read-only binary templates used to create Docker containers.
+Single files with all dependencies and configurations required to run a program.
+Ways to create images:
+Take images from Docker Hub.
+Create images from a Dockerfile.
+Create images from an existing Docker container.
+
+<h5> Docker Containers: </h5>
+
+Containers hold the entire package that is needed to run the application.
+In other words, we can say that the image is a template and the container is a copy of that template.
+A container is like a virtual machine.
+Images become containers when they run on the Docker engine.
+
+
+
+
+---------------------------------------------------------------------
+
+
+
+
+
 
 
 <p>Docker is defined as a freemium platform as a service (PaaS) solution that aids in creating, operating, and maintaining containers for isolated software development and testing by creating a virtualized operating system (OS) environment. </p>
